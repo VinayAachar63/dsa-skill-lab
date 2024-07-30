@@ -1,0 +1,32 @@
+class CustomNumber:
+    def _init_(self, value):
+        self.value = value
+    
+    def _add_(self, other):
+        # Overload + operator to perform subtraction
+        return self.value - other.value
+    
+    def _sub_(self, other):
+        # Overload - operator to perform addition
+        return self.value + other.value
+    
+    def _mul_(self, other):
+        # Overload * operator to perform division
+        return self.value / other.value
+    
+    def _truediv_(self, other):
+        # Overload / operator to perform multiplication
+        return self.value * other.value
+    
+    def _str_(self):
+        return str(self.value)
+
+# Example usage
+if _name_ == "_main_":
+    num1 = CustomNumber(10)
+    num2 = CustomNumber(5)
+    
+    print(f"{num1} + {num2} = {num1 + num2}")  # Should perform subtraction
+    print(f"{num1} - {num2} = {num1 - num2}")  # Should perform addition
+    print(f"{num1} * {num2} = {num1 * num2}")  # Should perform division
+    print(f"{num1} / {num2} = {num1 / num2}")  # Should perform multiplication
