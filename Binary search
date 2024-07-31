@@ -1,0 +1,17 @@
+def binarySearch(lst,target):
+    lst=sorted(lst)
+    l=0
+    h=len(lst)-1
+    while l<=h:
+        mid=(l+h)//2
+        if lst[mid]==target:
+            print("True")
+            break
+        elif lst[mid]>target:
+            h=mid-1
+        elif lst[mid]<target:
+            l=mid+1
+
+lst=[25,24,23,21,22]
+binarySearch(lst,24)
+
