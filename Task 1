@@ -1,28 +1,28 @@
 class CustomNumber:
-    def _init_(self, value):
+    def __init__(self, value):
         self.value = value
     
-    def _add_(self, other):
+    def __add__(self, other):
         # Overload + operator to perform subtraction
         return self.value - other.value
     
-    def _sub_(self, other):
+    def __sub__(self, other):
         # Overload - operator to perform addition
         return self.value + other.value
     
-    def _mul_(self, other):
+    def __mul__(self, other):
         # Overload * operator to perform division
         return self.value / other.value
     
-    def _truediv_(self, other):
+    def __truediv__(self, other):
         # Overload / operator to perform multiplication
         return self.value * other.value
     
-    def _str_(self):
+    def __str__(self):
         return str(self.value)
 
 # Example usage
-if _name_ == "_main_":
+if__name__ == "__main__":
     num1 = CustomNumber(10)
     num2 = CustomNumber(5)
     
