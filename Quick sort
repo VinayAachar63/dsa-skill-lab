@@ -1,0 +1,34 @@
+import random
+def quickSort(arr):
+    if len(arr)<=1:
+        return arr
+
+    pivot=random.choice(arr)
+    left=[i for i in arr if i<pivot]
+    right=[i for i in arr if i>pivot]
+    mid=[i for i in arr if i==pivot]
+    return quickSort(left)+mid+quickSort(right)
+arr=[18,15,14,16,12,17]
+print(quickSort(arr))
+
+
+
+import random
+def quickSort(arr):
+    if len(arr)<=1:
+        return arr
+
+    pivot=random.choice(arr)
+    left=[]
+    right=[]
+    mid=[]
+    for i in arr:
+        if i<pivot:
+            left.append(i)
+        elif i>pivot:
+            right.append(i)
+        else:
+            mid.append(i)
+    return quickSort(left)+mid+quickSort(right)
+arr=[18,15,14,16,12,17]
+print(quickSort(arr))
