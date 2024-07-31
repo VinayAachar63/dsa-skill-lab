@@ -1,0 +1,22 @@
+arr=[11,15,12,14,18,13]
+a=True
+while a:
+    a=False
+    for i in range(len(arr)-1):
+        if arr[i]>arr[i+1]:
+            arr[i],arr[i+1]=arr[i+1],arr[i]
+            a=True
+        print(arr)
+    print("Next loop")
+
+
+arr=[11,15,12,14,18,13]
+a=True
+while a:
+    a=False
+    for i in range(len(arr)-1):
+        if arr[i]<arr[i+1]:
+            arr[i],arr[i+1]=arr[i+1],arr[i]
+            a=True
+        print(arr)
+    print("Next loop")
