@@ -1,0 +1,42 @@
+from queue import Queue
+queues=Queue(maxsize=3)
+
+#Enqueue
+queues.put("a")
+queues.put(5)
+queues.put(10.5)
+if queues.full():
+    print("You can't add another element")
+else:
+    queues.put(6)
+print(queues)
+
+#Dequeue
+print(queues.get())
+print(queues)
+
+#Front
+print(queues.queue[0])
+
+#Isempty
+print(queues.empty())
+
+
+
+
+
+
+from queue import deque
+queues=deque([1,2,3,4,5])
+#Enqueue
+queues.append(6)
+queues.appendleft(7)
+print(queues)
+
+#Dequeue
+queues.pop()
+queues.popleft()
+print(queues)
+
+#Front
+#Isempty
