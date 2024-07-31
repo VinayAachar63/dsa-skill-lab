@@ -1,0 +1,8 @@
+lst=[25,23,24,21,26,28,29,63,54,21]
+target=28
+i=0
+while i<len(lst):
+    if target==lst[i]:
+        print(i)
+        break
+    i+=1
