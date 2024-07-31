@@ -1,11 +1,11 @@
 class StudentManager:
-    def _init_(self):
+    def __init__(self):
         self.students = {}
 
     def add_student(self):
         n = int(input("Enter the number of students: "))
         for i in range(n):
-            name = input(f"Enter the name of student {i+1}: ")
+            name = input(f"Enter the name of student {i + 1}: ")
             marks1 = int(input(f"Enter marks 1 for {name}: "))
             marks2 = int(input(f"Enter marks 2 for {name}: "))
             marks3 = int(input(f"Enter marks 3 for {name}: "))
@@ -31,6 +31,8 @@ class StudentManager:
             average = student[1][3]
             print(f"{rank}. {name} - Average: {average:.2f}")
             rank += 1
+
+# Create an instance of StudentManager and use its methods
 manager = StudentManager()
 manager.add_student()
 manager.show_names()
